@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
+
+
+/* 
+header color #1a1b26  */
+
+
+
+
+body{
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+    color: #dce1f8;
+    background-color: #15151c;
+
+}
+h3{
+    margin: 0;
+}
+
+button{
+    background-color: #15151c;
+    border: solid;
+    border-color: #191921;
+    color: #dce1f896;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 900;
+    display: inline-block;
+    font-size: 20px;
+    transition: ease-out 0.3s;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: #dce1f8;
+    color: #15151c;
+    
+}
+
+button:hover:before{
+    transform: 0.2s all ease;
+}
+
+#header{
+    padding: 0px;
+    background-color: #1a1b26;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -25px;
+    width: 102%;
+}
+
+
+h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 38px;
+}
+
+hr{
+    border:none;
+    height: 20px;
+    height: 50px;
+
+	box-shadow: 0 15px 15px -20px #0f0f14;
+    margin: -75px auto 10px;
+    margin-left: -s10px;
+    margin-right: -10px;
+    border-bottom: 1px solid #0f0f14;
+}
+
+#start{
+    border: none ;
+    color: #dce1f8 ;
+}
+#start:hover{
+    color: #ffffff;
+    background-color: #15151c;
+    
+}
+
+#start:hover:before{
+    transform: 0.2s all ease;
+}
+
+#msg-board{
+    text-align: center;
+    font-size: 24px;
+}
+
+#button-panel{
+    padding: 20px;
+
+    text-align: center;
+}
+
+#game-panel{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+
+}
+
+#board{
+
+    height: 50vh;
+    width: 50vh;
+}
+td{
+    border: 1px solid #303246;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    height: 16.66vh;
+    width: 16.66vh;
+    font-weight: 900;
+    font-size: 100px;
+    text-align: center;
+}
+td:hover{
+    background-color: #1f202c;
+    
+}
+
+td:hover:before{
+    transform: 0.2s all ease;
+}
+
+#score-panel{
+    padding: 20px;
+    text-align: center;
+}
+
+#score-h3{
+    font-size: 15px;
+}
