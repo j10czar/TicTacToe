@@ -183,6 +183,7 @@ function endGame()
     if(board[7]==""){b8.addEventListener('click' , () => { b8.innerText = ''})}
     if(board[8]==""){b9.addEventListener('click' , () => { b9.innerText = ''})}
 
+
     gameOver=true
     const restartBtn = document.createElement("button")
     restartBtn.innerHTML="Play again"
@@ -200,6 +201,17 @@ function endGame()
 function clearBoard()
 {
     
+    b1.style.color="#dce1f8"
+    b2.style.color="#dce1f8"
+    b3.style.color="#dce1f8"
+
+    b4.style.color="#dce1f8"
+    b5.style.color="#dce1f8"
+    b6.style.color="#dce1f8"
+
+    b7.style.color="#dce1f8"
+    b8.style.color="#dce1f8"
+    b9.style.color="#dce1f8"
     document.getElementById("score-h3").innerHTML="X - "+Xwins+"  | Tie - "+ties+"  |  O - "+Owins
     isX = true
     document.getElementById('msg-board').innerText = "It is X's turn."
@@ -227,34 +239,129 @@ function clearBoard()
 function Xwon()
 {
     //check rows
-    if(board[0]=="X"&&board[1]=="X"&&board[2]=="X")return true
-    if(board[3]=="X"&&board[4]=="X"&&board[5]=="X")return true
-    if(board[6]=="X"&&board[7]=="X"&&board[8]=="X")return true    
+    if(board[0]=="X"&&board[1]=="X"&&board[2]=="X")
+    {
+        b1.style.color="#7aa2f7"
+        b2.style.color="#7aa2f7"
+        b3.style.color="#7aa2f7"
+        return true
+    }
+    if(board[3]=="X"&&board[4]=="X"&&board[5]=="X")
+    {
+        b4.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b6.style.color="#7aa2f7"
+        return true
+    }
+    if(board[6]=="X"&&board[7]=="X"&&board[8]=="X")
+    {
+        b7.style.color="#7aa2f7"
+        b8.style.color="#7aa2f7"
+        b9.style.color="#7aa2f7"
+        return true
+    }    
     //check cols
-    if(board[0]=="X"&&board[3]=="X"&&board[6]=="X")return true
-    if(board[1]=="X"&&board[4]=="X"&&board[7]=="X")return true
-    if(board[2]=="X"&&board[5]=="X"&&board[8]=="X")return true
+    if(board[0]=="X"&&board[3]=="X"&&board[6]=="X")
+    {
+        b1.style.color="#7aa2f7"
+        b4.style.color="#7aa2f7"
+        b7.style.color="#7aa2f7"
+        return true
+    }   
+    if(board[1]=="X"&&board[4]=="X"&&board[7]=="X")
+    {
+        b2.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b8.style.color="#7aa2f7"
+        return true
+    }   
+    if(board[2]=="X"&&board[5]=="X"&&board[8]=="X")
+    {
+        b3.style.color="#7aa2f7"
+        b6.style.color="#7aa2f7"
+        b9.style.color="#7aa2f7"
+        return true
+    } 
 
     //check diagonals
-    if(board[0]=="X"&&board[4]=="X"&&board[8]=="X")return true
-    if(board[6]=="X"&&board[4]=="X"&&board[2]=="X")return true
+    if(board[0]=="X"&&board[4]=="X"&&board[8]=="X")
+    {
+        b1.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b9.style.color="#7aa2f7"
+        return true
+    } 
+    if(board[6]=="X"&&board[4]=="X"&&board[2]=="X")
+    {
+        b7.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b3.style.color="#7aa2f7"
+        return true
+    } 
 
     return false
 }
 
 function Owon()
 {
-    //check rows
-    if(board[0]=="O"&&board[1]=="O"&&board[2]=="O")return true
-    if(board[3]=="O"&&board[4]=="O"&&board[5]=="O")return true
-    if(board[6]=="O"&&board[7]=="O"&&board[8]=="O")return true    
+    if(board[0]=="O"&&board[1]=="O"&&board[2]=="O")
+    {
+        b1.style.color="#7aa2f7"
+        b2.style.color="#7aa2f7"
+        b3.style.color="#7aa2f7"
+        return true
+    }
+    if(board[3]=="O"&&board[4]=="O"&&board[5]=="O")
+    {
+        b4.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b6.style.color="#7aa2f7"
+        return true
+    }
+    if(board[6]=="O"&&board[7]=="O"&&board[8]=="O")
+    {
+        b7.style.color="#7aa2f7"
+        b8.style.color="#7aa2f7"
+        b9.style.color="#7aa2f7"
+        return true
+    }    
     //check cols
-    if(board[0]=="O"&&board[3]=="O"&&board[6]=="O")return true
-    if(board[1]=="O"&&board[4]=="O"&&board[7]=="O")return true
-    if(board[2]=="O"&&board[5]=="O"&&board[8]=="O")return true
+    if(board[0]=="O"&&board[3]=="O"&&board[6]=="O")
+    {
+        b1.style.color="#7aa2f7"
+        b4.style.color="#7aa2f7"
+        b7.style.color="#7aa2f7"
+        return true
+    }   
+    if(board[1]=="O"&&board[4]=="O"&&board[7]=="O")
+    {
+        b2.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b8.style.color="#7aa2f7"
+        return true
+    }   
+    if(board[2]=="O"&&board[5]=="O"&&board[8]=="O")
+    {
+        b3.style.color="#7aa2f7"
+        b6.style.color="#7aa2f7"
+        b9.style.color="#7aa2f7"
+        return true
+    } 
 
     //check diagonals
-    if(board[0]=="O"&&board[4]=="O"&&board[8]=="O")return true
-    if(board[6]=="O"&&board[4]=="O"&&board[2]=="O")return true
+    if(board[0]=="O"&&board[4]=="O"&&board[8]=="O")
+    {
+        b1.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b9.style.color="#7aa2f7"
+        return true
+    } 
+    if(board[6]=="O"&&board[4]=="O"&&board[2]=="O")
+    {
+        b7.style.color="#7aa2f7"
+        b5.style.color="#7aa2f7"
+        b3.style.color="#7aa2f7"
+        return true
+    }
     return false
 }
